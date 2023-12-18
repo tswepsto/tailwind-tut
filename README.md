@@ -1,3 +1,10 @@
+Tutorial:
+https://www.youtube.com/playlist?list=PL4cUxeGkcC9gpXORlEHjc5bgnIi5HEGhw
+
+LEFT OFF HERE:
+https://www.youtube.com/watch?v=kdF-OVtBtHU&list=PL4cUxeGkcC9gpXORlEHjc5bgnIi5HEGhw&index=17&ab_channel=NetNinja
+6:26
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
