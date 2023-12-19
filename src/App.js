@@ -1,13 +1,16 @@
+import React, { useState } from 'react';
+
 import stewImage from './assets/stew.jpg';
 import noodlesImage from './assets/noodles.jpg';
 import curryImage from './assets/curry.jpg';
 
 function App() {
+  const [isMenuHidden, setIsMenuHidden] = useState(true);
+
   const burgerHandler = () => {
-    menu.classList.contains('hidden') // select the menu id element, but in react
-      ? menu.classList.remove('hidden')
-      : menu.classList.remove('hidden');
+    setIsMenuHidden(!isMenuHidden);
   };
+
   return (
     // main container
     <div className="text-gray-600 font-body grid md:grid-cols-3">
@@ -42,9 +45,12 @@ function App() {
               </svg>
             </div>
           </div>
-          <ul className="text-sm mt-6 hidden md:block" id="menu">
+          <ul
+            className={`text-sm mt-6 ${isMenuHidden ? 'hidden' : ''} md:block`}
+            id="menu"
+          >
             <li className="text-gray-700 font-bold py-1 border-r-4 border-primary">
-              <a href="#" className="px-4 flex justify-end">
+              <a href="/" className="px-4 flex justify-end">
                 <span>Home</span>
                 <svg
                   fill="none"
@@ -64,7 +70,7 @@ function App() {
               </a>
             </li>
             <li className="py-1 border-r-4 border-white">
-              <a href="#" className="px-4 flex justify-end">
+              <a href="/" className="px-4 flex justify-end">
                 <span>About</span>
                 <svg
                   fill="none"
@@ -84,7 +90,7 @@ function App() {
               </a>
             </li>
             <li className="py-1 border-r-4 border-white">
-              <a href="#" className="px-4 flex justify-end">
+              <a href="/" className="px-4 flex justify-end">
                 <span>Contact</span>
                 <svg
                   fill="none"
@@ -111,14 +117,14 @@ function App() {
       <main className="px-16 py-6 bg-gray-100 md:col-span-2">
         <div className="flex justify-center md:justify-end">
           <a
-            href="#"
-            className="text-primary btn border-primary md:border-2 hover:bg-primary hover:text-white"
+            href="/"
+            className="text-primary btn border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500"
           >
             Log in
           </a>
           <a
-            href="#"
-            className="text-primary ml-2 btn border-primary md:border-2 hover:bg-primary hover:text-white"
+            href="/"
+            className="text-primary ml-2 btn border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500"
           >
             Sign up
           </a>
@@ -239,7 +245,7 @@ function App() {
         </div>
 
         <div className="flex justify-center">
-          <div className="bg-secondary-100 text-secondary-200 btn hover:shadow-inner">
+          <div className="bg-secondary-100 text-secondary-200 btn hover:shadow-inner transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">
             Load more
           </div>
         </div>
